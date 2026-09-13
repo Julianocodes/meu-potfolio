@@ -1,0 +1,274 @@
+:root {
+  --bg: #f6f4ef;
+  --ink: #20242b;
+  --ink-soft: #565c68;
+  --accent: #1f6f5c;
+  --accent-soft: #e3efec;
+  --card: #ffffff;
+  --line: #e2ded3;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.55;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 230px 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto auto;
+  grid-template-areas:
+    "navbar navbar navbar navbar"
+    "sidebar main main main"
+    "sidebar c1 c2 c3"
+    "footer footer footer footer";
+  min-height: 100vh;
+}
+
+nav.navbar {
+  grid-area: navbar;
+  background: var(--ink);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 32px;
+  height: 64px;
+}
+
+.navbar .logo {
+  font-weight: 700;
+  font-size: 1.05rem;
+  letter-spacing: -0.01em;
+}
+
+.navbar .links {
+  display: flex;
+  gap: 28px;
+}
+
+.navbar .links a {
+  color: #d8d8d8;
+  text-decoration: none;
+  font-size: 0.92rem;
+}
+
+.navbar .links a:hover {
+  color: #fff;
+}
+
+aside.sidebar {
+  grid-area: sidebar;
+  background: var(--card);
+  border-right: 1px solid var(--line);
+  padding: 40px 24px;
+  text-align: center;
+}
+
+.avatar {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: var(--accent);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 0 auto 18px;
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.sidebar h1 {
+  font-size: 1.2rem;
+  margin: 0 0 4px;
+}
+
+.sidebar .cargo {
+  color: var(--accent);
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.sidebar .bio {
+  font-size: 0.88rem;
+  color: var(--ink-soft);
+  margin-bottom: 24px;
+}
+
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+}
+
+.socials a {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--accent-soft);
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+main.sobre {
+  grid-area: main;
+  background: var(--card);
+  padding: 40px 44px;
+  border-bottom: 1px solid var(--line);
+}
+
+.sobre .eyebrow {
+  color: var(--accent);
+  font-size: 0.82rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.sobre h2 {
+  font-size: 1.7rem;
+  margin: 0 0 14px;
+  max-width: 26ch;
+}
+
+.sobre p {
+  max-width: 62ch;
+  color: var(--ink-soft);
+  margin-bottom: 20px;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skills span {
+  background: var(--accent-soft);
+  color: var(--accent);
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.projeto {
+  background: var(--card);
+  border-right: 1px solid var(--line);
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+.projeto:last-of-type {
+  border-right: none;
+}
+
+.projeto .thumb {
+  aspect-ratio: 16 / 9;
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--accent-soft);
+  margin-bottom: 16px;
+}
+
+.projeto .thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.projeto h3 {
+  font-size: 1.02rem;
+  margin: 0 0 8px;
+}
+
+.projeto p {
+  font-size: 0.87rem;
+  color: var(--ink-soft);
+  margin: 0 0 14px;
+  flex-grow: 1;
+}
+
+.projeto .tech {
+  font-size: 0.75rem;
+  color: var(--accent);
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.projeto a {
+  font-size: 0.85rem;
+  color: var(--ink);
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 2px solid var(--accent);
+  align-self: flex-start;
+}
+
+footer {
+  grid-area: footer;
+  background: var(--ink);
+  color: #cfd3da;
+  padding: 22px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-size: 0.85rem;
+}
+
+footer .footer-links {
+  display: flex;
+  gap: 18px;
+}
+
+footer a {
+  color: #cfd3da;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #fff;
+}
+
+@media (max-width: 780px) {
+  .layout {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "navbar"
+      "sidebar"
+      "main"
+      "c1"
+      "c2"
+      "c3"
+      "footer";
+  }
+  .projeto {
+    border-right: none;
+    border-bottom: 1px solid var(--line);
+  }
+}
