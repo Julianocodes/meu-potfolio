@@ -1,78 +1,65 @@
-# Portfólio | Juliano Roso
+# Currículo Online — Juliano Roso do Nascimento
 
-Portfólio pessoal desenvolvido para apresentar meus projetos e minha evolução como desenvolvedor Front-end.
+Site de currículo de um estudante de Análise e Desenvolvimento de Sistemas em busca de estágio em desenvolvimento front-end.
 
-## Sobre
+🔗 **Site:** [meu-potfolio-eight.vercel.app](https://meu-potfolio-eight.vercel.app/)
 
-Sou Juliano Roso, desenvolvedor Front-end em formação. Estudo HTML, CSS e JavaScript e venho criando projetos práticos para aprimorar minhas habilidades em desenvolvimento web, responsividade e experiência do usuário.
+## O que tem no site
 
-## Tecnologias
+- Perfil, formação e experiência profissional
+- Competências em front-end, web, ferramentas e IA
+- Projetos com link para cada demonstração
+- Cursos em andamento e concluídos
+- Certificados
+- Download do currículo em PDF
+
+## Projetos em destaque
+
+| Projeto | Descrição |
+| --- | --- |
+| [Consulta de clima](https://open-meteo-nine.vercel.app/) | Busca de cidades e clima com a API Open-Meteo |
+| [Livro de Pokémons](https://livro-de-pokemons.vercel.app/) | Busca de pokémons com a PokéAPI, em JavaScript puro |
+| [Estadias](https://estadias-prototipo.vercel.app/) | Protótipo de busca de acomodações (Next.js, React, TypeScript, Tailwind CSS) |
+| [Forno & Massa](https://forno-massa.vercel.app/) | Cardápio de pizzas com carrinho de compras |
+| [Sistema de login](https://login-do-zero.vercel.app/) | Validação de formulário, eventos e mensagens na interface |
+| [Calculadora](https://minha-primeira-calculadora-two.vercel.app/) | Calculadora com as quatro operações |
+| [Site de contabilidade](https://pasta-original.vercel.app/) | Página responsiva com HTML semântico e formulário de contato |
+
+## Tecnologias do site
 
 - HTML5
 - CSS3
-- JavaScript
-- Flexbox
-- CSS Grid
-- Design responsivo
-
-## Projetos
-
-### Site de Contabilidade
-
-Site com HTML semântico, formulário de contato e layout responsivo.
-
-[Ver projeto](https://pasta-original.vercel.app/)
-
-### Sistema de Login
-
-Sistema de login desenvolvido com HTML, CSS e JavaScript puro, com cadastro e autenticação na interface.
-
-[Ver projeto](https://login-do-zero.vercel.app/)
-
-### Minha Primeira Calculadora
-
-Calculadora para realizar operações matemáticas básicas usando HTML, CSS Grid e JavaScript.
-
-[Ver projeto](https://minha-primeira-calculadora-two.vercel.app/)
-
-## Como executar localmente
-
-1. Clone este repositório:
-
-   ```bash
-   git clone https://github.com/Julianocodes/meu-potfolio.git
-   ```
-
-2. Entre na pasta do projeto:
-
-   ```bash
-   cd meu-potfolio
-   ```
-
-3. Abra o arquivo `index.html` no navegador.
-
-Também é possível usar a extensão **Live Server** no VS Code para visualizar o projeto com atualização automática.
+- Deploy na Vercel
 
 ## Estrutura do projeto
 
-```text
-meu-potfolio/
-├── index.html
-├── README.md
-└── assets/
-    ├── css/
-    │   └── style.css
-    └── img/
-        ├── MinhaFoto.jpg
-        └── imagens dos projetos
 ```
+.
+├── index.html          # Página principal
+└── assets/
+    └── css/
+        └── style.css   # Estilos do site
+```
+
+## Como rodar localmente
+
+1. Clone o repositório:
+   ```
+   git clone https://github.com/Julianocodes/meu-potfolio.git
+   ```
+2. Entre na pasta do projeto.
+3. Abra o arquivo `index.html` no navegador.
+
+## Deploy
+
+O site é publicado automaticamente na Vercel a cada `push` na branch `main`.
+
+## Portfólio antigo
+
+A versão anterior do portfólio está preservada na branch [`portfolio-antigo`](https://github.com/Julianocodes/meu-potfolio/tree/portfolio-antigo).
 
 ## Contato
 
-- GitHub: [Julianocodes](https://github.com/Julianocodes)
-- LinkedIn: [Juliano Roso](https://www.linkedin.com/in/juliano-roso)
-- E-mail: [jhullyanno2014@gmail.com](mailto:jhullyanno2014@gmail.com)
-
-## Licença
-
-Este projeto foi desenvolvido para fins de estudo e apresentação profissional.
+- GitHub: [@Julianocodes](https://github.com/Julianocodes)
+- LinkedIn: [juliano-roso](https://www.linkedin.com/in/juliano-roso)
+- E-mail: jhullyanno2014@gmail.com
