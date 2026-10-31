@@ -548,6 +548,17 @@
         </section>
       </main>
 
+      <!-- Botão curtidas -->
+
+      <section class="like-box">
+        <h2>Gostou do meu currículo?</h2>
+        <p>Deixe sua curtida e me ajude a saber que o site foi útil.</p>
+        <button id="like-btn" type="button">🤍 Curtir</button>
+        <p class="like-total">
+          <strong id="like-count">0</strong> pessoas já curtiram
+        </p>
+      </section>
+
       <footer class="rodape">
         <p>
           &copy; 2026 Juliano Roso do Nascimento. Todos os direitos reservados.
@@ -556,12 +567,72 @@
     </div>
 
     <script>
+      const SUPABASE_URL = "https://equmgcvqmlrlugzcphgs.supabase.co";
+      const SUPABASE_KEY = "sb_publishable_1Dx7hwWjm6if4iHCpUy-RA_dFCvUqer";
+      const btn = document.getElementById("like-btn");
+      const count = document.getElementById("like-count");
+
+      function jaCurtiu() {
+        try {
+          return localStorage.getItem("curtiu") === "1";
+        } catch {
+          return false;
+        }
+      }
+      function marcarCurtido() {
+        btn.textContent = "❤️ Obrigado!";
+        btn.disabled = true;
+      }
+
+      async function carregar() {
+        try {
+          const r = await fetch(
+            SUPABASE_URL + "/rest/v1/site_likes?select=total&id=eq.1",
+            {
+              headers: { apikey: SUPABASE_KEY },
+            },
+          );
+          const dados = await r.json();
+          count.textContent = dados[0].total;
+        } catch (e) {
+          count.textContent = "0";
+        }
+      }
+
+      btn.addEventListener("click", async () => {
+        if (jaCurtiu()) return;
+        btn.disabled = true;
+        try {
+          const r = await fetch(SUPABASE_URL + "/rest/v1/rpc/increment_likes", {
+            method: "POST",
+            headers: {
+              apikey: SUPABASE_KEY,
+              "Content-Type": "application/json",
+            },
+            body: "{}",
+          });
+          count.textContent = await r.json();
+          try {
+            localStorage.setItem("curtiu", "1");
+          } catch {}
+          marcarCurtido();
+        } catch (e) {
+          btn.disabled = false;
+        }
+      });
+
+      if (jaCurtiu()) marcarCurtido();
+      carregar();
+    </script>
+
+    <script>
       window.va =
         window.va ||
         function () {
           (window.vaq = window.vaq || []).push(arguments);
         };
     </script>
+
     <script defer src="/_vercel/insights/script.js"></script>
   </body>
 </html>
