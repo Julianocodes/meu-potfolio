@@ -17,6 +17,7 @@ Site de currículo de um estudante de Análise e Desenvolvimento de Sistemas em 
 
 | Projeto | Descrição |
 | --- | --- |
+| [Placar de Vôlei](https://placar-volei-lime.vercel.app/) | App de placar "quem ganha fica" instalável no celular (PWA), com pódio, ranking e cronômetro |
 | [Consulta de clima](https://open-meteo-nine.vercel.app/) | Busca de cidades e clima com a API Open-Meteo |
 | [Livro de Pokémons](https://livro-de-pokemons.vercel.app/) | Busca de pokémons com a PokéAPI, em JavaScript puro |
 | [Estadias](https://estadias-prototipo.vercel.app/) | Protótipo de busca de acomodações (Next.js, React, TypeScript, Tailwind CSS) |

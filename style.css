@@ -365,9 +365,31 @@ h3 {
   padding-top: 0.5rem;
 }
 
-/* Com 7 projetos, o último ficaria sozinho na linha: ele ocupa a linha inteira */
-.cards .item:last-child:nth-child(3n + 1) {
-  grid-column: 1 / -1;
+/* Com 3 colunas, a última linha não pode ficar com espaço vazio:
+   a grade passa a ter 6 colunas e cada cartão ocupa 2 delas.
+   - sobrou 1 cartão na última linha: ele ocupa a linha inteira (6)
+   - sobraram 2 cartões: cada um ocupa metade da linha (3) */
+.projetos {
+  container-type: inline-size;
+}
+
+@container (min-width: 50rem) {
+  .cards {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .cards .item {
+    grid-column: span 2;
+  }
+
+  .cards .item:last-child:nth-child(3n + 1) {
+    grid-column: 1 / -1;
+  }
+
+  .cards .item:nth-last-child(2):nth-child(3n + 1),
+  .cards .item:last-child:nth-child(3n + 2) {
+    grid-column: span 3;
+  }
 }
 
 .projeto-links {
